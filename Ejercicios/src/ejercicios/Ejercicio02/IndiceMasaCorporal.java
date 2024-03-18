@@ -23,6 +23,24 @@ public class IndiceMasaCorporal {
                           El indice de masa corporal es: %.2f
                           """, imc);
         
+        if(imc < 18.5)
+        {
+            System.out.println("Indicador bajo");
+        }
+        else if(imc > 18.5 && imc <= 24.9)
+        {
+            System.out.println("Indicador normal");
+        }
+        else if(imc >= 25 && imc <= 29.9)
+        {
+            System.out.println("Indicador en sobrepeso");
+        }
+        else 
+        {
+            System.out.println("Indicador de obesidad");
+        }
+            
+        
         
     }
 
