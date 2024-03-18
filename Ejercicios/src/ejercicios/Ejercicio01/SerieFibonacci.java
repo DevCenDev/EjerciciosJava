@@ -14,8 +14,8 @@ public class SerieFibonacci {
         
         for(int i = 2; i < serie.length; i++)
         {
-            int resultado = serie[i - 1] + serie[i - 2];
-            System.out.print(resultado + " ");
+            serie[i] = serie[i - 1] + serie[i - 2];
+            System.out.print(serie[i] + " ");
         }
         
         
