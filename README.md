@@ -10,5 +10,6 @@ En este repositorio se subiran **constantemente** ejercicios de la web resueltos
 
 
 [ x ] Mostrar los n primeros numeros de la serie de fibonacci.
+
 [ x ] Calcular el IMC de una persona y mostrar su indicador (bajo, normal, sobrepeso, obeso)
 
