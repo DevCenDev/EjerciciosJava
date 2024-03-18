@@ -8,6 +8,8 @@ En este repositorio se subiran **constantemente** ejercicios de la web resueltos
 
 >La confusión forma parte de la programación. - Felienne Hermans
 
+Lista de Ejercicios resueltos:
+
 
 - [x] Mostrar los n primeros numeros de la serie de fibonacci.
 
