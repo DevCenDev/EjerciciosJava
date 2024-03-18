@@ -1,11 +1,18 @@
 
 package ejercicios.Ejercicio01;
 
+import java.util.Scanner;
+
 public class SerieFibonacci {
     public static void main(String[] args) {
-        // Mostrar los 10 primeros numeros de la serie de fibonacci contando desde el 0.
+        // Mostrar los n primeros numeros de la serie de fibonacci contando desde el 0.
+        Scanner lectura = new Scanner(System.in);
+        int n;
         
-        int serie [] = new int [10];
+        System.out.print("Ingrese el valor de n: ");
+        n = lectura.nextInt();
+        
+        int serie [] = new int [n];
         
         serie[0] = 0;
         serie [1] = 1;
