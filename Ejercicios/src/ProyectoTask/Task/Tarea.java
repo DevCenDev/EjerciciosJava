@@ -8,13 +8,9 @@ public class Tarea {
     private String nombre;
     private boolean completada;
     
-    public void agregarTarea()
+    public void agregarTarea(String nombreTarea, int duracion)
     {
-        String nombreTarea;
-        int duracion;
         Scanner lector = new Scanner(System.in);
-        System.out.print("Ingrese el nombre de la tarea: ");
-        nombreTarea = lector.nextLine();
         if(siString(nombreTarea))
         {
         }
@@ -22,9 +18,9 @@ public class Tarea {
         {
            throw new ArithmeticException("No es un String.");
         }
+        
+        
        
-        System.out.print("Duracion de la tarea en horas: ");
-        duracion = lector.nextInt();
         
     }
     
@@ -36,9 +32,9 @@ public class Tarea {
                           |        MENU       |
                           |-------------------|
                           |1. Agregar tarea   |
-                          |2. Lista de tareas |
-                          |3. Editar tarea    |
-                          |4. Eliminar tarea  |
+                          |2. Editar tarea    |
+                          |3. Eliminar tarea  |
+                          |4. Lista de tareas |
                           |5. Salir           |
                           |-------------------|
                            """);

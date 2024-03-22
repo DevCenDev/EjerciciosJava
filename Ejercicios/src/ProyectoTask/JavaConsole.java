@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class JavaConsole {
     public static void main(String[] args) {
+        Scanner escribirStr = new Scanner(System.in);
         Scanner escribir = new Scanner(System.in);
         Tarea tarea1 = new Tarea();
         
@@ -15,7 +16,27 @@ public class JavaConsole {
         
         switch (opcion) {
             case 1:
-                tarea1.agregarTarea();
+                System.out.print("Ingrese el nombre de la tarea: ");
+                String nombreTask = escribirStr.nextLine();
+                
+                System.out.print("Ingrese la cantidad de horas: ");
+                int cantHoras = escribir.nextInt();
+                
+                if(cantHoras < 0)
+                {
+                    while(true)
+                    {
+                        System.out.println("no puede ingresar numeros menores o iguales a 0.\n");
+                        System.out.print("Ingrese nuevamente la cantidad de horas: ");
+                        cantHoras = escribir.nextInt();
+                        if(cantHoras > 0 && cantHoras != 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+                System.out.println("Guardado exitosamente!");
+                tarea1.agregarTarea(nombreTask, cantHoras);
                 break;
             case 2:
                 break;
