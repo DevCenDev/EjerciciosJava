@@ -11,7 +11,7 @@ public class Tarea {
     public void agregarTarea()
     {
         String nombreTarea;
-        double duracion;
+        int duracion;
         Scanner lector = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la tarea: ");
         nombreTarea = lector.nextLine();
@@ -20,11 +20,11 @@ public class Tarea {
         }
         else
         {
-            System.out.println("No ingrese un numero");
+           throw new ArithmeticException("No es un String.");
         }
        
         System.out.print("Duracion de la tarea en horas: ");
-        duracion = lector.nextDouble();
+        duracion = lector.nextInt();
         
     }
     
@@ -42,8 +42,6 @@ public class Tarea {
                           |5. Salir           |
                           |-------------------|
                            """);
-        System.out.print("Ingrese una opcion: ");
-        int opcion = leer.nextInt();
     }
             
         
