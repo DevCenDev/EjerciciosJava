@@ -1,7 +1,6 @@
 
 package ProyectoTask;
 
-import ProyectoTask.Task.ListTask;
 import ProyectoTask.Task.Tarea;
 import java.util.Scanner;
 
@@ -9,7 +8,6 @@ public class JavaConsole {
     public static void main(String[] args) {
         Scanner escribir = new Scanner(System.in);
         Tarea task = new Tarea();
-        ListTask lisTareas = new ListTask();
         int opcion;
         
         do{
@@ -23,8 +21,7 @@ public class JavaConsole {
             case 2:
                 break;
             case 3:
-                lisTareas.verLista(task);
-            
+                task.verLista(task);
                 
                 break;
             case 4:
