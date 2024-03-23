@@ -5,12 +5,16 @@ import java.util.Scanner;
 
 public class Tarea {
     
-    private String nombre;
-    private boolean completada;
-    
-    public void agregarTarea(String nombreTarea, int duracion)
+    public void agregarTarea()
     {
         Scanner lector = new Scanner(System.in);
+        
+        String nombreTarea;
+        int cantHoras;
+        
+        System.out.print("Ingrese el nombre de la tarea: ");
+        nombreTarea = lector.nextLine();
+        
         if(siString(nombreTarea))
         {
         }
@@ -18,9 +22,8 @@ public class Tarea {
         {
            throw new ArithmeticException("No es un String.");
         }
-        
-        
-       
+        System.out.print("Ingrese la cantidad de horas: ");
+        cantHoras = lector.nextInt();
         
     }
     

@@ -4,23 +4,27 @@ package ProyectoTask.Task;
 import java.util.ArrayList;
 
 public class ListTask {
-    private ArrayList<String> listaTask = new ArrayList<>();
-    Tarea lista = new Tarea();
-
-    public ListTask() {
-    }
+    private ArrayList<Tarea> listaTask = new ArrayList<>();
     
-
-
-
-
-
-    
-    public ArrayList<String> getlistaTask()
+    public String verLista(Tarea list)
     {
-        return listaTask;
+        listaTask.add(list);
+        
+     for(Tarea array : listaTask)
+     {
+         System.out.println(array);
+     }
+        return null;
+        
     }
+   
     
+
+
+
+
+
+
     
     
     
