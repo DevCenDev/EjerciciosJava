@@ -9,15 +9,17 @@ public class JavaConsole {
         Scanner escribirStr = new Scanner(System.in);
         Scanner escribir = new Scanner(System.in);
         Tarea tarea1 = new Tarea();
+        int opcion;
         
-        tarea1.menuOpciones();
-        System.out.print("Ingrese una opcion: ");
-        int opcion = escribir.nextInt();
-        
+        do{
+            String nombreTask = null;
+            tarea1.menuOpciones();
+            System.out.print("Ingrese una opcion: ");
+            opcion = escribir.nextInt();
         switch (opcion) {
             case 1:
                 System.out.print("Ingrese el nombre de la tarea: ");
-                String nombreTask = escribirStr.nextLine();
+                nombreTask = escribirStr.nextLine();
                 
                 System.out.print("Ingrese la cantidad de horas: ");
                 int cantHoras = escribir.nextInt();
@@ -39,15 +41,20 @@ public class JavaConsole {
                 tarea1.agregarTarea(nombreTask, cantHoras);
                 break;
             case 2:
+                
                 break;
             case 3:
+              
+                
                 break;
             case 4:
                 break;
                 
             default:
                 throw new AssertionError();
+            }
         }
+        while(opcion != 4);
         
         
         
@@ -57,5 +64,6 @@ public class JavaConsole {
         
         
     }
+  
 
 }

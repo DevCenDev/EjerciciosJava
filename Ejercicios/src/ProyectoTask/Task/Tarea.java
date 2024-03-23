@@ -32,10 +32,9 @@ public class Tarea {
                           |        MENU       |
                           |-------------------|
                           |1. Agregar tarea   |
-                          |2. Editar tarea    |
-                          |3. Eliminar tarea  |
-                          |4. Lista de tareas |
-                          |5. Salir           |
+                          |2. Eliminar tarea  |
+                          |3. Lista de tareas |
+                          |4. Salir           |
                           |-------------------|
                            """);
     }
