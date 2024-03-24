@@ -6,13 +6,15 @@ import java.util.Scanner;
 
 public class Tarea {
     private String nombreTarea;
-    private int cantHoras;
-    private int index;
+    private int cantHoras, index;
     private final ArrayList<Tarea> listaTask = new ArrayList<>();
+
+    public Tarea() {
+    }
     
-    public Tarea()
+    public Tarea(int index)
     {
-        
+        this.index = index;
     }
     
     public Tarea(String nombreTarea, int cantHoras)
@@ -21,20 +23,16 @@ public class Tarea {
         this.nombreTarea = nombreTarea;
         
     }
-    public Tarea(int index)
-    {
-        this.index = index;
-        
+
+    public int getIndex() {
+        return index;
     }
-    
+   
 
     public String getNombreTarea() {
         return nombreTarea;
     }
-    public int getIndex()
-    {
-        return  index;
-    }
+    
 
     public int getCantHoras() {
         return cantHoras;
@@ -111,19 +109,12 @@ public class Tarea {
     }
       public void remover(Tarea list)
       {
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Ingrese el numero a borrar: ");
-        index = leer.nextInt();
-        
-        listaTask.remove(getIndex());
+          Scanner leer = new Scanner(System.in);
+          System.out.println("Ingrese el numero a eliminar: ");
+          this.index = leer.nextInt();
           
-        
-          
-          
-          
-          
-          
-          
+          Tarea remover = new Tarea(index);
+           listaTask.remove(remover);
           
       }
       
