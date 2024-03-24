@@ -15,3 +15,4 @@ Lista de Ejercicios resueltos:
 
 - [x] Calcular el IMC de una persona y mostrar su indicador (bajo, normal, sobrepeso, obeso)
 
+- [x] Usando POO crear un gestor de tareas donde permita (agregar tarea, eliminar tarea, ver lista de tareas, salir) en un menu de opciones.
