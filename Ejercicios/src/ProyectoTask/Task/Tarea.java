@@ -9,29 +9,6 @@ public class Tarea {
     private int cantHoras;
     private final ArrayList<Tarea> listaTask = new ArrayList<>();
 
-    public Tarea() {
-    }
-    
-    
-    
-    public Tarea(String nombreTarea, int cantHoras)
-    {
-        this.cantHoras = cantHoras;
-        this.nombreTarea = nombreTarea;
-        
-    }
-
-
-    public String getNombreTarea() {
-        return nombreTarea;
-    }
-    
-
-    public int getCantHoras() {
-        return cantHoras;
-    }
-    
-    
     
     public void agregarTarea()
     {
