@@ -6,16 +6,13 @@ import java.util.Scanner;
 
 public class Tarea {
     private String nombreTarea;
-    private int cantHoras, index;
+    private int cantHoras;
     private final ArrayList<Tarea> listaTask = new ArrayList<>();
 
     public Tarea() {
     }
     
-    public Tarea(int index)
-    {
-        this.index = index;
-    }
+    
     
     public Tarea(String nombreTarea, int cantHoras)
     {
@@ -24,10 +21,6 @@ public class Tarea {
         
     }
 
-    public int getIndex() {
-        return index;
-    }
-   
 
     public String getNombreTarea() {
         return nombreTarea;
@@ -48,15 +41,21 @@ public class Tarea {
         System.out.print("Ingrese el nombre de la tarea: ");
         nombreTarea = lector.nextLine();
         
-        if(siString(nombreTarea))
-        {
+        if (!siString(nombreTarea) || nombreTarea.isEmpty()) {
+            throw new IllegalArgumentException("Nombre de tarea no válido.");
         }
-        else
-        {
-           throw new ArithmeticException("No es un String.");
-        }
-        System.out.print("Ingrese la cantidad de horas: ");
-        cantHoras = lector.nextInt();
+            System.out.print("Ingrese la cantidad de horas: ");
+            cantHoras = lector.nextInt();
+            
+            if(cantHoras <= 0)
+            {
+                throw new IllegalArgumentException("Cantidad de horas no válida.");
+            }
+            Tarea nuevaTarea = new Tarea();
+            nuevaTarea.nombreTarea = nombreTarea;
+            nuevaTarea.cantHoras = cantHoras;
+            listaTask.add(nuevaTarea);
+            
         
     }
     
@@ -89,34 +88,42 @@ public class Tarea {
     @Override
     public String toString()
     {
-        return  "Indice: " + getIndex() + " || " +
-                "Tarea: " + getNombreTarea() + " || " +
-                "Horas: " + getCantHoras();
+                return 
+                "Tarea: " + nombreTarea + " || " +
+                "Horas: " + cantHoras;
     }
     
-    
-    
-      public void verLista(Tarea list)
+    public void verLista()
     {
-        Tarea newTarea = new Tarea(nombreTarea, cantHoras);
-        listaTask.add(newTarea);
-        
         for(int i = 0; i < listaTask.size(); i++)
         {
-            System.out.println(listaTask.get(i));
+            System.out.println("ID: " + i + " || " + listaTask.get(i));
         }
-     
     }
-      public void remover(Tarea list)
+    
+    
+    
+      
+      
+      public void remove()
       {
           Scanner leer = new Scanner(System.in);
-          System.out.println("Ingrese el numero a eliminar: ");
-          this.index = leer.nextInt();
+          System.out.print("Ingrese el ID para borrar: ");
+          int index = leer.nextInt();
           
-          Tarea remover = new Tarea(index);
-           listaTask.remove(remover);
+          if(index >= 0 && index < listaTask.size())
+          {
+              listaTask.remove(index);
+              System.out.println("Se elimino correctamente.");
+          }
+          else
+          {
+              throw new IllegalArgumentException("Ingrese un indice valido.");
+          }
+          
           
       }
+    
       
     
      

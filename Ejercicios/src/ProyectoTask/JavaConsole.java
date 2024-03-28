@@ -8,7 +8,6 @@ public class JavaConsole {
     public static void main(String[] args) {
         Scanner escribir = new Scanner(System.in);
         Tarea task = new Tarea();
-        Tarea quitar = new Tarea();
         int opcion;
         
         do{
@@ -22,11 +21,10 @@ public class JavaConsole {
                 task.agregarTarea();
                 break;
             case 2:
-                quitar.remover(task);
+                task.remove();
                 break;
             case 3:
-                task.verLista(task);
-                
+                task.verLista();
                 break;
             case 4:
                 break;
